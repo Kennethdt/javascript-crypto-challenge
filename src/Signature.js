@@ -16,6 +16,7 @@ module.exports = {
         return key;
     },
     sign : async function (msg) {
+        await init();
         return nacl.crypto_sign(msg, verifyingKey);
     }
 };
